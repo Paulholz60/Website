@@ -2,4 +2,7 @@
 	--Primary: white;
 	--Stroke: red;
 	--Text: black;
+	
+	--transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	--transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
