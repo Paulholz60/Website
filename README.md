@@ -9,7 +9,6 @@ This is a modern website designed for the Roblox game **German Rail Network**. T
 
 ## Project Structure
 ```
-Website/
 	index.html        # Main landing page
 	Pallete.css       # Color palette and theme variables
 	styles.css        # Main stylesheet for layout and components
@@ -21,4 +20,4 @@ Website/
 ## License
 This project is for community and educational use. Please credit the original creators if you use or modify this site.
 
-[![Visit site]](https://paulholz60.github.io/Website/)
+![GRN Website](https://img.shields.io/badge/Visit%20site-GRN-crimson?style=for-the-badge&link=https%3A%2F%2Fpaulholz60.github.io%2FWebsite%2F)
