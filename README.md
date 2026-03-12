@@ -15,13 +15,10 @@ Website/
 	styles.css        # Main stylesheet for layout and components
 ```
 
-
-## Website Link
-You can access the website at: [http://localhost/Website/index.html](https://paulholz60.github.io/Website/)
-
 ## About the Game
 **German Rail Network** is a Roblox game simulating the experience of operating and managing trains across Germany. This website serves as an informational and community hub for players.
 
 ## License
 This project is for community and educational use. Please credit the original creators if you use or modify this site.
-# Website
+
+[![Visit site]](https://paulholz60.github.io/Website/)
