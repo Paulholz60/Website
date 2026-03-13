@@ -4,26 +4,28 @@
 
 This is a modern website designed for the Roblox game **German Rail Network**. The site provides information, resources, and a stylish interface for players and fans of the game.
 
-## Features
+## ✨ Features
 - **Modern Design:** Utilizes custom CSS for a clean, contemporary look.
 - **Responsive Layout:** Works well on both desktop and mobile devices.
 - **Easy Customization:** Styles are organized in `Pallete.css` and `styles.css` for easy updates.
 - **Interactive Elements:** Dynamic features and interactivity powered by `script.js`.
 
-## Project Structure
-```
-Images/           # Image assets
+## 🗂️ Project Structure
 
-index.html        # Main landing page
+| File/Folder    | Description                          |
+| -------------- | ------------------------------------ |
+| Images/        | Image assets                         |
+| index.html     | Main landing page                    |
+| Pallete.css    | Color palette and theme variables    |
+| styles.css     | Main stylesheet for layout/components|
+| script.js      | Main JavaScript for interactivity    |
 
-Pallete.css       # Color palette and theme variables
-styles.css        # Main stylesheet for layout and components
 
-script.js         # Main JavaScript file for interactivity
-```
-
-## About the Game
+## 🎮 About the Game
 **German Rail Network** is a Roblox game simulating the experience of operating and managing trains across Germany. This website serves as an informational and community hub for players.
 
-## License
+## 🚧 Work in Progress
+This website is actively being developed. Features, design, and content may change frequently as improvements are made.
+
+## 📄 License
 This project is for community and educational use. Please credit the original creators if you use or modify this site.
