@@ -1,3 +1,5 @@
+[![GRN Website](https://img.shields.io/badge/Visit%20site-GRN-firebrick?style=for-the-badge)](https://paulholz60.github.io/Website/)
+
 # German Rail Network Website
 
 This is a modern website designed for the Roblox game **German Rail Network**. The site provides information, resources, and a stylish interface for players and fans of the game.
@@ -6,12 +8,18 @@ This is a modern website designed for the Roblox game **German Rail Network**. T
 - **Modern Design:** Utilizes custom CSS for a clean, contemporary look.
 - **Responsive Layout:** Works well on both desktop and mobile devices.
 - **Easy Customization:** Styles are organized in `Pallete.css` and `styles.css` for easy updates.
+- **Interactive Elements:** Dynamic features and interactivity powered by `script.js`.
 
 ## Project Structure
 ```
-	index.html        # Main landing page
-	Pallete.css       # Color palette and theme variables
-	styles.css        # Main stylesheet for layout and components
+Images/           # Image assets
+
+index.html        # Main landing page
+
+Pallete.css       # Color palette and theme variables
+styles.css        # Main stylesheet for layout and components
+
+script.js         # Main JavaScript file for interactivity
 ```
 
 ## About the Game
@@ -19,5 +27,3 @@ This is a modern website designed for the Roblox game **German Rail Network**. T
 
 ## License
 This project is for community and educational use. Please credit the original creators if you use or modify this site.
-
-![GRN Website](https://img.shields.io/badge/Visit%20site-GRN-crimson?style=for-the-badge&link=https%3A%2F%2Fpaulholz60.github.io%2FWebsite%2F)

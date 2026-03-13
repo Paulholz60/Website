@@ -8,27 +8,68 @@
 	<link href="./styles.css" rel="stylesheet">
 </head>
 <body>
+<div class="backgroundHome"></div>
+<div class="backgroundStats"></div>
+<div class="backgroundVersions"></div>
+<div class="backgroundApplications"></div>
+<script src="./script.js"></script>
 
   <div class="container">
 
     <!-- Top Navigation Bar -->
-    <nav class="navbar">
-      <a href="#">Home</a>
-      <a href="#">Versions</a>
-      <a href="#">Applications</a>
-      <a href="#">Your Stats</a>
-    </nav>
+    <div class="navbar">
+      <button class="tablink active" onclick="openTab(event, 'HomeTab')">Home</button>
+      <button class="tablink" onclick="openTab(event, 'VersionsTab')">Versions</button>
+      <button class="tablink" onclick="openTab(event, 'ApplicationsTab')">Applications</button>
+      <button class="tablink" onclick="openTab(event, 'StatsTab')">Your Stats</button>
+    </div>
 
     <!-- Main Content -->
     <section class="content">
-      <div class="content-box">
-        <h1>German Rail Network</h1>
-        <p>
-          This template features a CSS Grid layout, a parallax background effect, and a floating navigation bar with hover effects.
-        </p>
-        <p>
-          The content area is neatly placed in a rounded box, ensuring readability against the parallax background.
-        </p>
+      <div name="HomeTab" class="content-box">
+        <h1>Title</h1>
+        <pre>
+Description
+        </pre>
+      </div>
+    </section>
+
+    <section class="content">
+      <div name="VersionsTab" class="content-box">
+        <h1>Version History</h1>
+        <pre>
+          
+        </pre>
+        <pre>
+          
+        </pre>
+      </div>
+    </section>
+
+    <section class="content">
+      <div name="ApplicationsTab" class="content-box">
+        <h1>Applications</h1>
+        <pre>
+          
+        </pre>
+        <pre>
+          
+        </pre>
+      </div>
+    </section>
+
+    <section class="content">
+      <div name="StatsTab" class="content-box">
+        <h1>Your Stats</h1>
+        <pre>
+0 TC
+        </pre>
+        <pre>
+0 Km driven
+        </pre>
+        <pre>
+Trains: none
+        </pre>
       </div>
     </section>
 
@@ -38,6 +79,5 @@
     </footer>
 
   </div>
-
 </body>
 </html>
