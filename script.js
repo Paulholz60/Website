@@ -1,3 +1,21 @@
+// Fade-in on scroll for .content-box
+document.addEventListener('DOMContentLoaded', function() {
+  var boxes = document.querySelectorAll('.content-box');
+  var reveal = function() {
+    var windowHeight = window.innerHeight;
+    boxes.forEach(function(box) {
+      var rect = box.getBoundingClientRect();
+      if (rect.top < windowHeight - 60) {
+        box.classList.add('visible');
+      } else {
+        box.classList.remove('visible');
+      }
+    });
+  };
+  reveal();
+  window.addEventListener('scroll', reveal);
+  window.addEventListener('resize', reveal);
+});
 var NAVBAR_OFFSET_PERCENT = 40; // percent of viewport height
 
 UpdateBackground(); // Initial call to set background positions on page load

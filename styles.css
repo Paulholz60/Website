@@ -1,5 +1,14 @@
 @import url("./Pallete.css");
 
+@keyframes tablink-slide-in {
+  from {
+    background-position: 100% 0%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
+
 /* General Reset */
 * {
   margin: 0;
@@ -96,7 +105,10 @@ body {
 
 /* Hover Effect for Tabs */
 .tablink.active {
-  background: linear-gradient(80deg, var(--Stroke) 40%, var(--Primary) 40%, var(--Primary) 45%, var(--Stroke) 45%, var(--Stroke) 48%, var(--Primary) 48%, var(--Primary) 52%, var(--Stroke) 52%, var(--Stroke) 54%, var(--Primary) 54%);
+  background: linear-gradient(80deg, var(--Stroke) 20%, var(--Primary) 20%, var(--Primary) 22%, var(--Stroke) 22%, var(--Stroke) 24%, var(--Primary) 24%, var(--Primary) 26%, var(--Stroke) 26%, var(--Stroke) 28%, var(--Primary) 28%);
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  animation: tablink-slide-in 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
   color: var(--Text);
   transform: translateY(-4px) scale(1.04);
   box-shadow: 0 8px 24px 0 rgba(0,0,0,0.18);
@@ -105,7 +117,10 @@ body {
 }
 
 .tablink:hover {
-  background: linear-gradient(80deg, var(--StrokeLight) 40%, var(--Primary) 40%, var(--Primary) 45%, var(--StrokeLight) 45%, var(--StrokeLight) 48%, var(--Primary) 48%, var(--Primary) 52%, var(--StrokeLight) 52%, var(--StrokeLight) 54%, var(--Primary) 54%);
+  background: linear-gradient(80deg, var(--StrokeLight) 20%, var(--Primary) 20%, var(--Primary) 22%, var(--StrokeLight) 22%, var(--StrokeLight) 24%, var(--Primary) 24%, var(--Primary) 26%, var(--StrokeLight) 26%, var(--StrokeLight) 28%, var(--Primary) 28%);
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  animation: tablink-slide-in 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
   color: var(--Text);
   transform: translateY(-4px) scale(1.04);
   box-shadow: 0 8px 24px 0 rgba(0,0,0,0.18);
@@ -128,38 +143,52 @@ body {
 /* Modern Content Box with Decorative Lines */
 .content-box {
   position: relative;
-  background: var(--Primary);
+  background: rgba(255,255,255,0.45);
   padding: 48px 48px 48px 48px;
   max-width: 820px;
   border-radius: 28px;
-  box-shadow: 0 12px 36px 0 rgba(0,0,0,0.18), 0 1.5px 0 0 var(--Stroke) inset;
+  box-shadow:
+    0 16px 48px 0 rgba(0,0,0,0.22),
+    0 1.5px 0 0 var(--Stroke) inset,
+    0 0.5px 24px 0 rgba(255,255,255,0.12) inset;
   text-align: center;
-  border: none;
+  border: 1.5px solid rgba(239,175,170,0.25);
   overflow: hidden;
-  transition: box-shadow var(--transition-fast), background var(--transition-slow);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  box-shadow:
+    0 16px 48px 0 rgba(0,0,0,0.22),
+    0 1.5px 0 0 var(--Stroke) inset,
+    0 0.5px 24px 0 rgba(255,255,255,0.12) inset,
+    0 2px 8px 0 rgba(239,175,170,0.10);
+  perspective: 900px;
+  transform-style: preserve-3d;
+  transition: box-shadow var(--transition-fast), background var(--transition-slow), transform 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 
-.content-box::before, .content-box::after {
-  content: "";
-  position: absolute;
-  left: 32px;
-  right: 32px;
-  height: 2.5px;
-  background: var(--Primary);
-  border-radius: 2px;
-  opacity: 0.18;
-  pointer-events: none;
-  transition: opacity var(--transition-fast);
+/* Fade-in animation for content-box */
+.content-box {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98) perspective(900px) rotateX(8deg) rotateY(-3deg);
+  transition:
+    opacity 0.8s cubic-bezier(0.4,0,0.2,1),
+    transform 0.8s cubic-bezier(0.4,0,0.2,1),
+    box-shadow var(--transition-fast),
+    background var(--transition-slow);
 }
-.content-box::before {
-  top: 24px;
-}
-.content-box::after {
-  bottom: 24px;
+
+.content-box.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) perspective(900px) rotateX(0deg) rotateY(0deg);
 }
 .content-box:hover, .content-box:focus-within {
-  box-shadow: 0 24px 64px 0 rgba(0,0,0,0.22), 0 4px 0 0 var(--Stroke) inset;
-  background: var(--Primary);
+  box-shadow:
+    0 32px 96px 0 rgba(0,0,0,0.28),
+    0 4px 0 0 var(--Stroke) inset,
+    0 0.5px 32px 0 rgba(255,255,255,0.18) inset,
+    0 4px 16px 0 rgba(239,175,170,0.16);
+  background: rgba(255,255,255,0.92);
+  transform: translateY(-8px) scale(1.025) rotateX(6deg) rotateY(-3deg);
 }
 .content-box:hover::before, .content-box:hover::after,
 .content-box:focus-within::before, .content-box:focus-within::after {
