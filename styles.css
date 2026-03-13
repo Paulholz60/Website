@@ -35,6 +35,7 @@ body {
 .backgroundStats {
   background-image: url("./Images/background2.png");
   background-size: auto 150%;
+  background-color: #303030;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -42,7 +43,7 @@ body {
 }
 .backgroundVersions {
   background: var(--Primary);
-  height: 150vh;
+  height: 150%;
   z-index: 0;
 
   border-top: solid var(--Stroke) 3px;
@@ -50,7 +51,7 @@ body {
 }
 .backgroundApplications {
   background: var(--StrokeLight);
-  height: 150vh;
+  height: 150%;
   z-index: 0;
 
   border-top: solid var(--Stroke) 3px;

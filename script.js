@@ -13,22 +13,24 @@ function openTab(evt, tabName) {
   window.scrollTo({ top: targetY, behavior: 'smooth' });
 }
 function UpdateBackground() {
+  var Pos = window.scrollY / window.innerHeight;
+
   var background = this.document.getElementsByClassName("backgroundVersions")[0];
-  var Y = 100 + window.scrollY * -0.1;
+  var Y = 100 + Pos * -140;
   background.style.top = Y + '%';
 
   background = this.document.getElementsByClassName("backgroundApplications")[0];
-  var Y = 250 + window.scrollY * -0.1;
+  var Y = 250 + Pos * -140;
   background.style.top = Y + '%';
 
   background = this.document.getElementsByClassName("backgroundStats")[0];
-  var Y = -150 + window.scrollY * 0.05;
+  var Y = -150 + Pos * 65;
   background.style.backgroundPositionY = Y + '%';
 
   background = this.document.getElementsByClassName("backgroundHome")[0];
-  if (window.scrollY * 0.1 > 100)
+  if (Pos * 100 > 100)
   {   
-    background.style.backgroundPositionY = '600%';
+    background.style.backgroundPositionY = '6000%';
     return;
   }
 
